@@ -12,7 +12,7 @@ import lombok.Setter;
 public class SflowExtendedRouterData {
 	private int tag;//当值为1002的时候，flow类型的sample包的extended router data类型
 	private int length;//该字段总的字节数，不包含tag和length
-	private String nextHop;//下一跳IP
+	private String nextHop;//下一跳IP	8字节
 	private int nextHop_source_mask;//源IP匹配转发表中的掩码
 	private int nextHop_destination_mask;//目的IP匹配转发表中的掩码
 	@Override

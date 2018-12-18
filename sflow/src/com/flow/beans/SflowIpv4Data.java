@@ -8,9 +8,9 @@ public class SflowIpv4Data {
 	private int tag;//当值为3的时候，flow类型的sample包的IPV4 Data类型
 	private int length;//该字段总的字节数，不包含tag和length
 	private int len_ip_packet;//原始报文三层头以及后续报文的总字节长度
-	private String ip_proto;//协议TCP:6 UDP:17 ICMP(1) IGMP（2）
-	private String src_ip;//源IP
-	private String des_ip;//目的IP
+	private String ip_proto;//协议TCP:6 UDP:17 ICMP(1) IGMP（2）4字节
+	private String src_ip;//源IP 4字节
+	private String des_ip;//目的IP 4字节
 	private int src_port;//源端口
 	private int des_port;//目的端口
 	private int tcp_flag;//（TCP包才有）

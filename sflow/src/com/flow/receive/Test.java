@@ -423,13 +423,13 @@ public class Test {
 		// 当值为1002的时候，flow类型的sample包的extended router data类型
 		if (tag == 1002) {
 			int length=dis.readInt();//该字段总的字节数，不包含tag和length
-			int nextHop=dis.readInt();//下一跳IP
+			long nextHop=dis.readLong();//下一跳IP
 			int nextHop_source_mask=dis.readInt();//源IP匹配转发表中的掩码
 			int nextHop_destination_mask=dis.readInt();//目的IP匹配转发表中的掩码
 			SflowExtendedRouterData extendedRouterData = new SflowExtendedRouterData();
 			extendedRouterData.setTag(1002);
 			extendedRouterData.setLength(length);
-			extendedRouterData.setNextHop(IpOperation.getIpFromLong((long)nextHop));
+			extendedRouterData.setNextHop(IpOperation.getIpFromLong(nextHop));
 			extendedRouterData.setNextHop_source_mask(nextHop_source_mask);
 			extendedRouterData.setNextHop_destination_mask(nextHop_destination_mask);
 			
