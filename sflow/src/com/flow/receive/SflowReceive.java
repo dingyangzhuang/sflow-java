@@ -21,14 +21,14 @@ public class SflowReceive {
 	    DatagramSocket socket = new DatagramSocket(6343);
 	    byte[] infoBytes = new byte[1024];
 	    int num = 0;
-	    System.out.println("服务器端启动了·········");
+	    System.out.println("Sflow Server is started!·········");
 	    while (true) {
 	        DatagramPacket packet = new DatagramPacket(infoBytes, infoBytes.length);
 	        socket.receive(packet);
-	        UdpServerThread thread = new UdpServerThread(packet, socket, infoBytes);
+	        UdpServerThread thread = new UdpServerThread(packet, socket);
 	        thread.start();
 	        System.out.println(thread);
-	        System.out.println("访问的客户端数量：" + (num++));
+	        System.out.println("receive udp packet num：" + (num++));
 	    }
 	}
 }

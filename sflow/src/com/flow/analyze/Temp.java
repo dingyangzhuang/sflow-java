@@ -1,20 +1,29 @@
 package com.flow.analyze;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Map.Entry;
+import java.util.Map;
+import java.util.Properties;
+import java.util.Set;
+
+import com.flow.output.OutPutRedis;
+
 import Utils.DataConvert;
+import Utils.PropertiesTool;
+import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPoolConfig;
 
 public class Temp {
-	public static void main(String[] args) {
-		long a = 9747218102353920L;
-		String mac = Long.toHexString(a);
-		System.out.println(mac);
-		StringBuffer head = new StringBuffer();
-		for(int i=0;i<16-mac.length();i++){
-			head.append("0");
+	public static void main(String[] args) throws IOException {
+		for(int i=0;i<2000;i++){
+			OutPutRedis.writeRedis(""+i);
 		}
-		head.append(mac);
-		System.out.println(head.toString().substring(0,head.length()-4));
 		
-		System.out.println(DataConvert.getIpProtocol2Str(6));
-
 	}
+
+
+
 }
