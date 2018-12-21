@@ -18,8 +18,7 @@ public class SflowExtendedSwitchData {
 	private int dst_priority;//出向的优先级
 	@Override
 	public String toString() {
-		return "SflowExtendedSwitchData [tag=" + tag + ", length=" + length + ", src_vlan=" + src_vlan
-				+ ", src_priority=" + src_priority + ", dst_vlan=" + dst_vlan + ", dst_priority=" + dst_priority + "]";
+		return "\"src_vlan\":\"" + src_vlan + "\", \"dst_vlan\":\"" + dst_vlan + "\"";
 	}
 	
 

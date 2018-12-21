@@ -13,8 +13,8 @@ public class ExpandedCountersSampleHeader {
 	int num_elements;//包含的记录数
 	@Override
 	public String toString() {
-		return "ExpandedCountersSampleHeader [tag=" + tag + ",lenght=" + lenght + ", sequence_number1=" + sequence_number1
-				+ ", ds_class=" + ds_class + ", ds_index=" + ds_index + ", num_elements=" + num_elements + "]";
+		return "\"ds_class\":\"" + ds_class + "\", \"ds_index\":\"" + ds_index + "\"";
 	}
+	
 
 }

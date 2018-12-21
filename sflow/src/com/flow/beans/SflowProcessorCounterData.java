@@ -19,10 +19,11 @@ public class SflowProcessorCounterData {
 	private long FreeMemory;//可用的内存数
 	@Override
 	public String toString() {
-		return "SflowProcessorCounterData [tag=" + tag + ", length=" + length + ", FiveSecCPULoad=" + FiveSecCPULoad
-				+ ", OneMinCPULoad=" + OneMinCPULoad + ", FiveMinCPULoad=" + FiveMinCPULoad + ", TotalMemory="
-				+ TotalMemory + ", FreeMemory=" + FreeMemory + "]";
+		return "\"FiveSecCPULoad\":\"" + FiveSecCPULoad + "\", \"OneMinCPULoad\":\"" + OneMinCPULoad
+				+ "\", \"FiveMinCPULoad\":\"" + FiveMinCPULoad + "\", \"TotalMemory\":\"" + TotalMemory
+				+ "\", \"FreeMemory\":\"" + FreeMemory + "\"";
 	}
+
 
 	
 }

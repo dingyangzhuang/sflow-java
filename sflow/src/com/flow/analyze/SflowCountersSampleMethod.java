@@ -22,17 +22,19 @@ public class SflowCountersSampleMethod {
 		/************** expanded counters sample *********************/
 		ExpandedCountersSampleHeader countersSampleHeader = getExpandedCountersSampleHeader(dis);
 		int i = countersSampleHeader.getNum_elements();
-		str.append(sflowHeader + " "+countersSampleHeader + " ");
+		str.append(sflowHeader + ","+countersSampleHeader + ",");
 		// 根据元素的个数进行处理
 		while (i > 0) {
 			/** 处理元素的方法 **/
 			/** sflow_extendedcounter_generalif_data **/
 			Object counter = getExpandedCountersSampleDate(dis);
 			if (null != counter) {
-				str.append(counter.toString());
+				str.append(counter.toString()+",");
 			}
 			i--;
 		}
+		
+		str.append("\"dataType\":\"CountersSample\"}");
 		OutPutRedis.writeRedis(str.toString());
 	}
 	

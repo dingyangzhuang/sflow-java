@@ -21,16 +21,18 @@ public class SflowExtendedCountersEthernetIfData {
 	private int FrameTooLongs;//帧太长
 	private int InternalMacReceiveErrors;//内部MAC接收错误
 	private int SymbolErrors;//符号错误
-	
 	@Override
 	public String toString() {
-		return "SflowExtendedCountersEthernetIfData [tag=" + tag + ", length=" + length + ", AlignmentErrors="
-				+ AlignmentErrors + ", FCSErrors=" + FCSErrors + ", SingleCollisionFrames=" + SingleCollisionFrames
-				+ ", MultipleCollisionFrames=" + MultipleCollisionFrames + ", SQETestErrors=" + SQETestErrors
-				+ ", DeferredTransmissions=" + DeferredTransmissions + ", LateCollisions=" + LateCollisions
-				+ ", ExcessiveCollisions=" + ExcessiveCollisions + ", InternalMacTransmitErrors="
-				+ InternalMacTransmitErrors + ", CarrierSenseErrors=" + CarrierSenseErrors + ", FrameTooLongs="
-				+ FrameTooLongs + ", InternalMacReceiveErrors=" + InternalMacReceiveErrors + ", SymbolErrors="
-				+ SymbolErrors + "]";
+		return "\"AlignmentErrors\":\"" + AlignmentErrors + "\", \"FCSErrors\":\"" + FCSErrors
+				+ "\", \"SingleCollisionFrames\":\"" + SingleCollisionFrames + "\", \"MultipleCollisionFrames\":\""
+				+ MultipleCollisionFrames + "\", \"SQETestErrors\":\"" + SQETestErrors
+				+ "\", \"DeferredTransmissions\":\"" + DeferredTransmissions + "\", \"LateCollisions\":\""
+				+ LateCollisions + "\", \"ExcessiveCollisions\":\"" + ExcessiveCollisions
+				+ "\", \"InternalMacTransmitErrors\":\"" + InternalMacTransmitErrors + "\", \"CarrierSenseErrors\":\""
+				+ CarrierSenseErrors + "\", \"FrameTooLongs\":\"" + FrameTooLongs
+				+ "\", \"InternalMacReceiveErrors\":\"" + InternalMacReceiveErrors + "\", \"SymbolErrors\":\""
+				+ SymbolErrors + "\"";
 	}
+	
+
 }

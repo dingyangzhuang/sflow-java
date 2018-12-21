@@ -19,9 +19,12 @@ public class SflowIpv4Data {
 	 * LengthIpPacket-24字节******************/
 	@Override
 	public String toString() {
-		return "SflowIpv4Data [tag=" + tag + ", length=" + length + ", len_ip_packet=" + len_ip_packet + ", ip_proto="
-				+ ip_proto + ", src_ip=" + src_ip + ", des_ip=" + des_ip + ", src_port=" + src_port + ", des_port="
-				+ des_port + ", tcp_flag=" + tcp_flag + ", tos=" + tos + "]";
+		return "\"len_ip_packet\":\"" + len_ip_packet
+				+ "\", \"ip_proto\":\"" + ip_proto + "\", \"src_ip\":\"" + src_ip + "\", \"des_ip\":\"" + des_ip
+				+ "\", \"src_port\":\"" + src_port + "\", \"des_port\":\"" + des_port + "\", \"tcp_flag\":\"" + tcp_flag
+				+ "\", \"tos\":\"" + tos + "\"";
 	}
+	
+
 	
 }

@@ -102,7 +102,7 @@ public class Test {
 		sflowHeader.setNumSamples(numSamples);
 		return sflowHeader;
 	}
-
+		
 	/**
 	 * 获取counters sample的具体信息，包括头和体
 	 * 
@@ -376,7 +376,12 @@ public class Test {
 			ethernetIfData.setLen_mac_packet(len_mac_packet);
 			ethernetIfData.setSrc_mac(DataConvert.getMacFromLong(src_mac));
 			ethernetIfData.setDes_mac(DataConvert.getMacFromLong(des_mac));
-			ethernetIfData.setEthernet_packet_type(ethernet_packet_type);
+			if(ethernet_packet_type==2048){
+				ethernetIfData.setEthernet_packet_type("ipv4");
+			}else{
+				ethernetIfData.setEthernet_packet_type("unkonw");
+			}
+			
 
 			return ethernetIfData;
 		}

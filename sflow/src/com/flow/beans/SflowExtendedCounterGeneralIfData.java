@@ -34,15 +34,16 @@ public class SflowExtendedCounterGeneralIfData {
 
 	@Override
 	public String toString() {
-		return "SflowExtendedCounterGeneralIfData [tag=" + tag + ", length=" + length + ", ifIndex=" + ifIndex
-				+ ", ifType=" + ifType + ", ifSpeed=" + ifSpeed + ", ifDirection=" + ifDirection + ", ifStatus="
-				+ ifStatus + ", ifInOctets=" + ifInOctets + ", ifInUcastPkts=" + ifInUcastPkts + ", ifInMulticastPkts="
-				+ ifInMulticastPkts + ", ifInBroadcastPkts=" + ifInBroadcastPkts + ", ifInDards=" + ifInDards
-				+ ", ifInErrors=" + ifInErrors + ", ifInUnknowProtos=" + ifInUnknowProtos + ", ifOutOctets="
-				+ ifOutOctets + ", ifOutUcastPkts=" + ifOutUcastPkts + ", ifOutMulticastPkts=" + ifOutMulticastPkts
-				+ ", ifOutBroadcastPkts=" + ifOutBroadcastPkts + ", ifOutDards=" + ifOutDards + ", ifOutErrors="
-				+ ifOutErrors + ", ifPromiscuousMode=" + ifPromiscuousMode + "]";
+		return "\"ifIndex\":\"" + ifIndex + "\", \"ifSpeed\":\"" + ifSpeed + "\", \"ifInOctets\":\"" + ifInOctets
+				+ "\", \"ifInUcastPkts\":\"" + ifInUcastPkts + "\", \"ifInMulticastPkts\":\"" + ifInMulticastPkts
+				+ "\", \"ifInBroadcastPkts\":\"" + ifInBroadcastPkts + "\", \"ifInDards\":\"" + ifInDards
+				+ "\", \"ifInErrors\":\"" + ifInErrors + "\", \"ifInUnknowProtos\":\"" + ifInUnknowProtos
+				+ "\", \"ifOutOctets\":\"" + ifOutOctets + "\", \"ifOutUcastPkts\":\"" + ifOutUcastPkts
+				+ "\", \"ifOutMulticastPkts\":\"" + ifOutMulticastPkts + "\", \"ifOutBroadcastPkts\":\""
+				+ ifOutBroadcastPkts + "\", \"ifOutDards\":\"" + ifOutDards + "\", \"ifOutErrors\":\"" + ifOutErrors
+				+ "\", \"ifPromiscuousMode\":\"" + ifPromiscuousMode + "\"";
 	}
+	
 
 	
 	

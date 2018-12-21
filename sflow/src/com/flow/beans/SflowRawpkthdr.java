@@ -18,10 +18,11 @@ public class SflowRawpkthdr {
 	private int original_packet_length;//截取的原始报文总字节数
 	@Override
 	public String toString() {
-		return "SflowRawpkthdr [tag=" + tag + ", length=" + length + ", header_protocol=" + header_protocol
-				+ ", frame_length=" + frame_length + ", payload_removed=" + payload_removed
-				+ ", original_packet_length=" + original_packet_length + "]";
+		return "\"header_protocol\":\"" + header_protocol + "\", \"frame_length\":\"" + frame_length
+				+ "\", \"payload_removed\":\"" + payload_removed + "\", \"original_packet_length\":\""
+				+ original_packet_length + "\"";
 	}
+
 	
 	/*********该字段最后还包含一个原始包的数据，这里不进行解析，所有读取数据的时候，要
 	 * 跳过OriginalRacketlength长度的字节数*******************/

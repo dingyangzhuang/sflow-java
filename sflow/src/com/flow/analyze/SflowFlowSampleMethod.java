@@ -62,17 +62,18 @@ public class SflowFlowSampleMethod {
 		/************** expanded counters sample *********************/
 		ExpandedFlowSampleHeader FlowSampleHeader = getExpandedFlowSampleHeader(dis);
 		int i = FlowSampleHeader.getFlow_record();
-		str.append(sflowHeader + " "+FlowSampleHeader + " ");
+		str.append(sflowHeader + ","+FlowSampleHeader + ",");
 		
 		// 根据元素的个数进行处理
 		while (i > 0) {
 			/** 处理元素的方法 **/
 			Object counter = getExpandedFlowSampleDate(dis);
 			if (null != counter) {								
-				str.append(counter.toString());
+				str.append(counter.toString()+",");
 			}
 			i--;
 		}
+		str.append("\"dataType\":\"flowSample\"}");
 		OutPutRedis.writeRedis(str.toString());
 	}
 
@@ -122,7 +123,11 @@ public class SflowFlowSampleMethod {
 			ethernetIfData.setLen_mac_packet(len_mac_packet);
 			ethernetIfData.setSrc_mac(DataConvert.getMacFromLong(src_mac));
 			ethernetIfData.setDes_mac(DataConvert.getMacFromLong(des_mac));
-			ethernetIfData.setEthernet_packet_type(ethernet_packet_type);
+			if(ethernet_packet_type==2048){
+				ethernetIfData.setEthernet_packet_type("ipv4");
+			}else{
+				ethernetIfData.setEthernet_packet_type("unkonw");
+			}
 
 			return ethernetIfData;
 		}

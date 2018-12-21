@@ -17,10 +17,10 @@ public class SflowExtendedRouterData {
 	private int nextHop_destination_mask;//目的IP匹配转发表中的掩码
 	@Override
 	public String toString() {
-		return "SflowExtendedRouterData [tag=" + tag + ", length=" + length + ", nextHop=" + nextHop
-				+ ", nextHop_source_mask=" + nextHop_source_mask + ", nextHop_destination_mask="
-				+ nextHop_destination_mask + "]";
+		return "\"nextHop\":\"" + nextHop + "\", \"nextHop_source_mask\":\"" + nextHop_source_mask
+				+ "\", \"nextHop_destination_mask\":\"" + nextHop_destination_mask + "\"";
 	}
+	
 
 	
 }

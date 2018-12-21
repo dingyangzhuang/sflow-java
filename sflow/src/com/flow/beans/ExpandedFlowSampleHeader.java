@@ -21,13 +21,23 @@ public class ExpandedFlowSampleHeader {
 	private int flow_record;//包含的记录数
 	@Override
 	public String toString() {
-		return "ExpandedFlowSampleHeader [tag=" + tag + ", length=" + length + ", seq_num=" + seq_num + ", src_type="
-				+ src_type + ", src_index=" + src_index + ", sampling_rate=" + sampling_rate + ", sample_pool="
-				+ sample_pool + ", dropped_packets=" + dropped_packets + ", input_interface_format="
-				+ input_interface_format + ", input_interface_value=" + input_interface_value
-				+ ", output_interface_format=" + output_interface_format + ", output_interface_value="
-				+ output_interface_value + ", flow_record=" + flow_record + "]";
+		return "\"sampling_rate\":\"" + sampling_rate + "\", \"sample_pool\":\"" + sample_pool + "\", \"dropped_packets\":\""
+				+ dropped_packets + "\", \"input_interface_format\":\"" + input_interface_format
+				+ "\", \"input_interface_value\":\"" + input_interface_value + "\", \"output_interface_format\":\""
+				+ output_interface_format + "\", \"output_interface_value\":\"" + output_interface_value
+				+ "\"";
 	}
+	
+
+//	public String toString() {
+//		return "ExpandedFlowSampleHeader [" + tag + " " + length + " " + seq_num + " "
+//				+ src_type + " " + src_index + " " + sampling_rate + " "
+//				+ sample_pool + " " + dropped_packets + " "
+//				+ input_interface_format + " " + input_interface_value
+//				+ " " + output_interface_format + " "
+//				+ output_interface_value + " " + flow_record + "]";
+//	}
+	
 
 	
 	

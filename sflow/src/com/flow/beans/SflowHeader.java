@@ -14,8 +14,8 @@ public class SflowHeader {
 	private int numSamples;//包含的记录数目
 	@Override
 	public String toString() {
-		return "SflowHeader [version=" + version + ", agent_address_type=" + agent_address_type + ", ip=" + ip
-				+ ", sub_agent_id=" + sub_agent_id + ", sequence_number=" + sequence_number + ", sysUptime=" + sysUptime
-				+ ", numSamples=" + numSamples + "]";
+		return "{\"version\":\"" + version + "\", \"agent_address_type\":\"" + 
+				agent_address_type + "\", \"agent_ip\":\"" + ip + "\"";
 	}
+	
 }
