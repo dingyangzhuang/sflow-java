@@ -33,8 +33,11 @@ public class SflowCountersSampleMethod {
 			}
 			i--;
 		}
-		
-		str.append("\"dataType\":\"CountersSample\"}");
+		if(countersSampleHeader.getNum_elements()==1){
+			str.append("\"dataType\":\"CountersDevice\"}");
+		}else{
+			str.append("\"dataType\":\"CountersSample\"}");
+		}
 		OutPutRedis.writeRedis(str.toString());
 	}
 	

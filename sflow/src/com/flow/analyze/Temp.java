@@ -1,9 +1,11 @@
 package com.flow.analyze;
 
+import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Map.Entry;
 import java.util.Map;
 import java.util.Properties;
@@ -18,9 +20,12 @@ import redis.clients.jedis.JedisPoolConfig;
 
 public class Temp {
 	public static void main(String[] args) throws IOException {
-		for(int i=0;i<2000;i++){
-			OutPutRedis.writeRedis(""+i);
-		}
+		InputStream in = new BufferedInputStream(
+				new FileInputStream("./conf/sflow.properties"));
+		Properties pro = new Properties();
+		pro.load(in);
+		in.close();
+		System.out.println(pro.getProperty("redis_ip"));
 		
 	}
 
