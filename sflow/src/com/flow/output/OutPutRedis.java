@@ -10,8 +10,8 @@ import redis.clients.jedis.JedisPool;
 
 public class OutPutRedis {
 	public static Properties pro = PropertiesTool.pro;
-	public static GenericObjectPoolConfig poolConfig;
-	public static JedisPool jedisPool;
+	public static GenericObjectPoolConfig poolConfig=new GenericObjectPoolConfig();
+	public static JedisPool jedisPool=null;
 	// 与redis建立连接
 	static {
 		// // 设置最大连接数为默认值的 5 倍
@@ -29,7 +29,7 @@ public class OutPutRedis {
 
 		// 设置开启 jmx 功能
 
-		poolConfig.setJmxEnabled(true);
+		//poolConfig.setJmxEnabled(true);
 
 		// 设置连接池没有连接后客户端的最大等待时间 ( 单位为毫秒 )
 
